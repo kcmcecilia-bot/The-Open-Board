@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Open Board</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<!-- LOGIN OVERLAY -->
+	<div id="loginOverlay" class="overlay active">
+		<div class="login-card">
+			<h2>Login to The Open Board</h2>
+
+			<select id="roleSelect">
+				<option value="employee">Employee</option>
+				<option value="admin">Admin</option>
+			</select>
+
+			<input id="username" placeholder="Username">
+			<input id="password" type="password" placeholder="Password">
+
+			<button id="loginBtn">Enter Board</button>
+
+			<div class="test-creds">
+				<strong>Test Credentials:</strong><br>
+				Admin → admin / admin123<br>
+				Employee → user / user123
+			</div>
+		</div>
+	</div>
+
+	<!-- NAVBAR -->
+	<nav class="navbar">
+		<div class="nav-left">
+			<button>Home</button>
+			<button>Popular</button>
+			<button>New</button>
+			<button>FAQ</button>
+		</div>
+
+		<div class="nav-center">
+			<input placeholder="Search ideas...">
+		</div>
+
+		<div class="nav-right">
+			<button id="logoutBtn">Logout</button>
+		</div>
+	</nav>
+
+	<header>
+		<h1>The Open Board</h1>
+		<p class="rule-bar">
+			COMMUNITY GOVERNANCE RULE: POSTS WITH A SCORE OF -10 WILL BE AUTOMATICALLY REMOVED.
+		</p>
+	</header>
+
+	<main class="board">
+
+		<div class="column" data-status="submitted">
+			<h3>Submitted</h3>
+			<div class="card-container"></div>
+		</div>
+
+		<div class="column" data-status="reviewing">
+			<h3>Reviewing</h3>
+			<div class="card-container"></div>
+		</div>
+
+		<div class="column" data-status="progress">
+			<h3>In Progress</h3>
+			<div class="card-container"></div>
+		</div>
+
+		<div class="column" data-status="implemented">
+			<h3>Implemented</h3>
+			<div class="card-container"></div>
+		</div>
+
+		<div class="column" data-status="rejected">
+			<h3>Rejected</h3>
+			<div class="card-container"></div>
+		</div>
+
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
